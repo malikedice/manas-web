@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <main>
-      {/* SLIDER */}
+      {/* SLIDER - Telefon Butonu Kaldırıldı */}
       <section className="relative h-[500px] md:h-[750px] bg-slate-900 overflow-hidden">
         {slides.map((slide, index) => (
           <div key={index} className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
@@ -40,15 +40,12 @@ export default function Home() {
             <div className="relative h-full max-w-7xl mx-auto px-6 flex flex-col justify-center text-white">
               <h4 className="text-blue-400 font-bold tracking-[0.3em] uppercase mb-4 text-sm">{slide.sub}</h4>
               <h2 className="text-4xl md:text-8xl font-black mb-10 leading-[0.9] max-w-4xl uppercase italic">{slide.title}</h2>
-              <a href={`tel:${phoneNumber}`} className="bg-blue-600 text-white w-fit px-12 py-5 rounded-full font-bold hover:bg-white hover:text-blue-900 transition shadow-2xl">
-                 📞 {displayPhone}
-              </a>
             </div>
           </div>
         ))}
       </section>
 
-      {/* ÜRÜNLERİMİZ BAŞLIĞI VE LİSTESİ */}
+      {/* MARKALARIMIZ & ÜRÜN GRUPLARI */}
       <section id="urunlerimiz" className="py-24 max-w-7xl mx-auto px-6">
         <h3 className="text-4xl font-black text-slate-900 uppercase italic mb-16 border-l-8 border-blue-600 pl-6">Markalarımız & Ürün Grupları</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -64,20 +61,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FİYAT LİSTESİ KISMI */}
-      <section id="fiyat-listesi" className="py-24 bg-slate-50 text-center">
-        <h3 className="text-4xl font-black text-slate-900 uppercase italic mb-12 tracking-tighter">Fiyat Listesi</h3>
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-          {myProducts.map((item) => (
-            <div key={item.id} className="bg-white p-8 border border-slate-200 flex flex-col items-center rounded-xl shadow-sm hover:border-blue-300 transition">
-               <img src={item.logo} alt={item.name} className="h-10 object-contain mb-4" />
-               <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest">LİSTE HAZIRLANIYOR</span>
-            </div>
-          ))}
+      {/* FİYAT LİSTESİ - Görsel ve Kutu Boyutu Markalarımız ile Eşitlendi */}
+      <section id="fiyat-listesi" className="py-24 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-6">
+           <h3 className="text-4xl font-black text-slate-900 uppercase italic mb-12 tracking-tighter text-center">Fiyat Listesi</h3>
+           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+             {myProducts.map((item) => (
+               <div key={item.id} className="flex flex-col items-center group text-center">
+                 <div className="w-full aspect-square border border-slate-200 p-8 flex flex-col items-center justify-center bg-white shadow-sm hover:shadow-xl hover:border-blue-300 transition-all rounded-3xl">
+                    <img src={item.logo} alt={item.name} className="max-w-full h-auto object-contain mb-6" />
+                    <span className="text-[10px] font-black text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full">LİSTE HAZIRLANIYOR</span>
+                 </div>
+                 <h5 className="mt-6 font-black text-slate-800 uppercase text-xs tracking-widest">{item.name}</h5>
+               </div>
+             ))}
+           </div>
         </div>
       </section>
 
-      {/* İLETİŞİM BÖLÜMÜ (Yeni Eklendi) */}
+      {/* İLETİŞİM BÖLÜMÜ - Telefon Sadece Burada Mevcut */}
       <section id="iletisim" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16">
            <div className="space-y-8">

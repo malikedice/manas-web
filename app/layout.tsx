@@ -28,13 +28,10 @@ export default function RootLayout({
     <html lang="tr" className="scroll-smooth">
       <body className={`${inter.variable} font-sans antialiased bg-white text-slate-900`}>
         
-        {/* TOP BAR */}
+        {/* TOP BAR - Telefon Kaldırıldı */}
         <div className="bg-[#0f172a] text-white py-2 hidden md:block border-b border-white/5">
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center text-[10px] font-bold tracking-[0.2em] uppercase">
             <div className="flex space-x-8">
-              <a href={`tel:${phoneNumber}`} className="hover:text-blue-400 transition flex items-center">
-                <span className="mr-2">📞</span> {displayPhone}
-              </a>
               <span className="text-slate-400 italic">DENİZLİ MERKEZEFENDİ</span>
             </div>
             <div className="flex space-x-6">
@@ -44,14 +41,14 @@ export default function RootLayout({
           </div>
         </div>
 
-        {/* NAVİGASYON */}
+        {/* NAVİGASYON - Font Boyutu Büyütüldü (text-sm) */}
         <nav className="bg-white/95 backdrop-blur-md border-b sticky top-0 z-[100] shadow-sm">
           <div className="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
             <Link href="/">
               <img src="/images/manas-logo2.png" alt="Manas Logo" className="w-32 md:w-56 h-auto" />
             </Link>
             
-            <div className="hidden lg:flex items-center space-x-8 text-[11px] font-extrabold uppercase text-slate-700">
+            <div className="hidden lg:flex items-center space-x-8 text-sm font-extrabold uppercase text-slate-700">
               
               <div className="relative group cursor-pointer h-24 flex items-center">
                 <span className="group-hover:text-blue-600 transition">Kurumsal ▼</span>
@@ -66,11 +63,10 @@ export default function RootLayout({
               <a href="/#urunlerimiz" className="hover:text-blue-600 transition">Ürünlerimiz</a>
               <a href="/#fiyat-listesi" className="hover:text-blue-600 transition">Fiyat Listesi</a>
               
-              {/* YENİ LİNKLER */}
               <a href="https://manas.diaeticaret.com/" target="_blank" className="text-blue-600 border-2 border-blue-600 px-4 py-1.5 rounded-full hover:bg-blue-600 hover:text-white transition">
                 Online Ödeme
               </a>
-              <a href="https://b2b.manasboya.com" target="_blank" className="text-slate-900 border-2 border-slate-900 px-4 py-1.5 rounded-full hover:bg-slate-900 hover:text-white transition">
+              <a href="https://manas.diaeticaret.com/" target="_blank" className="text-slate-900 border-2 border-slate-900 px-4 py-1.5 rounded-full hover:bg-slate-900 hover:text-white transition">
                 Bayi Girişi
               </a>
               
@@ -83,14 +79,14 @@ export default function RootLayout({
 
         {children}
 
-        {/* FOOTER */}
+        {/* FOOTER - Telefon Burada Kalıyor */}
         <footer className="bg-[#0f172a] text-slate-400 py-20 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16 text-center md:text-left">
             <div className="space-y-8">
               <img src="/images/manas-logo3.png" alt="Manas Logo" className="w-48 mx-auto md:mx-0" />
               <div className="flex justify-center md:justify-start space-x-6 text-[10px] font-bold uppercase tracking-widest">
                  <a href="https://manas.diaeticaret.com/" className="text-blue-400 hover:text-white transition italic underline underline-offset-4">Online Ödeme</a>
-                 <a href="https://b2b.manasboya.com" className="text-white hover:text-blue-400 transition italic underline underline-offset-4">Bayi Girişi</a>
+                 <a href="https://manas.diaeticaret.com/" className="text-white hover:text-blue-400 transition italic underline underline-offset-4">Bayi Girişi</a>
               </div>
             </div>
             <div className="space-y-4">
