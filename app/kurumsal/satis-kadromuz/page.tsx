@@ -1,11 +1,44 @@
+import type { Metadata } from "next";
+import SayfaBasi from "@/components/SayfaBasi";
+import Serit from "@/components/Serit";
+import { TELEFON, TELEFON_GORUNEN, WHATSAPP } from "@/components/site";
+
+export const metadata: Metadata = { title: "Satış Kadromuz" };
+
 export default function SatisKadromuz() {
   return (
-    <div className="max-w-4xl mx-auto py-20 px-6 min-h-[60vh]">
-      <h1 className="text-4xl md:text-6xl font-black uppercase italic mb-8 border-l-8 border-blue-600 pl-6">Satış Kadromuz</h1>
-      <div className="bg-blue-50 border-2 border-blue-100 p-10 rounded-3xl text-center">
-        <p className="text-xl text-blue-900 font-bold mb-6 italic">Uzman kadromuzla projelerinizde yanınızdayız.</p>
-        <a href="tel:+905333718119" className="inline-block bg-blue-600 text-white px-10 py-4 rounded-full font-black uppercase tracking-widest shadow-xl">BİZE ULAŞIN</a>
-      </div>
-    </div>
+    <>
+      <SayfaBasi
+        yol="/kurumsal/satis-kadromuz"
+        baslik="Satış Kadromuz"
+        ozet="Doğru ürün, doğru fiyat ve zamanında teslimat için yanınızdayız."
+      />
+      <section className="icerik">
+        <div className="kap">
+          <div className="kadro">
+            <div className="metin-govde">
+              <p className="giris-p">Uzman kadromuzla projelerinizde yanınızdayız.</p>
+              <p>
+                Ürün seçimi, fiyat, stok ve teslimat konularında satış ekibimiz size en uygun çözümü sunmak için hazır. Bize
+                ulaşın, ihtiyacınızı ilgili arkadaşımıza hemen iletelim.
+              </p>
+              <div className="cagri">
+                <a className="dugme koyu" href={`tel:${TELEFON}`}>
+                  Bize ulaşın: {TELEFON_GORUNEN}
+                </a>
+                <a className="dugme cerceve" href={WHATSAPP} target="_blank" rel="noopener">
+                  WhatsApp&apos;tan yazın
+                </a>
+              </div>
+              <Serit kucuk />
+            </div>
+            <figure>
+              <img src="/img/manas-yol.jpg" alt="Manas logolu sevkiyat tırı" />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <Serit />
+    </>
   );
 }

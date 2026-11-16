@@ -1,30 +1,59 @@
+import type { Metadata } from "next";
+import SayfaBasi from "@/components/SayfaBasi";
+import Serit from "@/components/Serit";
+
+export const metadata: Metadata = { title: "Biz Kimiz?" };
+
 export default function BizKimiz() {
   return (
-    <div className="max-w-4xl mx-auto py-20 px-6 min-h-[70vh]">
-      {/* BAŞLIK */}
-      <h1 className="text-4xl md:text-6xl font-black uppercase italic mb-12 border-l-8 border-blue-600 pl-6 text-slate-900">
-        Biz Kimiz?
-      </h1>
-
-      {/* İÇERİK */}
-      <div className="space-y-8 text-lg text-slate-600 leading-relaxed font-medium">
-        <p>
-          <strong className="text-slate-900">Manas Boya A.Ş.</strong>, boya ve hırdavat ürünleri satışı ile profesyonel boya uygulama hizmetleri alanında faaliyet gösteren, sektör deneyimi güçlü bir firmadır.
-        </p>
-
-        <p>
-          Güçlü geçmişimiz sayesinde, yalnızca ürün tedarik eden bir firma olmanın ötesine geçerek; müşterilerimize doğru ürün seçimi, doğru uygulama ve güvenilir hizmet sunan bir çözüm ortağı olarak konumlanıyoruz. Geniş ürün yelpazemiz, güçlü tedarik ağımız ve hızlı teslimat anlayışımızla, farklı ölçeklerdeki projelere etkin ve sürdürülebilir çözümler sağlıyoruz.
-        </p>
-
-
-        <p>
-          Manas Boya A.Ş. olarak amacımız; müşterilerimizin ihtiyaçlarını doğru analiz eden, iş süreçlerini kolaylaştıran ve uzun vadeli iş birlikleri kuran bir yapı oluşturmaktır. Satış ve uygulama süreçlerinin her aşamasında şeffaf, çözüm odaklı ve güvenilir bir yaklaşım benimseyerek, müşteri memnuniyetini en üst seviyede tutmayı hedefliyoruz.
-        </p>
-
-        <p className="pt-6 border-t border-slate-100">
-          Denizli merkezli operasyonlarımızla, sanayi boyalarından inşaat grubuna kadar her aşamada profesyonel çözüm ortağınız olmaya devam ediyoruz.
-        </p>
-      </div>
-    </div>
+    <>
+      <SayfaBasi
+        yol="/kurumsal/biz-kimiz"
+        baslik="Biz Kimiz?"
+        ozet="Denizli merkezli, boya ve hırdavat ürünlerinde güçlü bir çözüm ortağı."
+      />
+      <section className="icerik">
+        <div className="kap">
+          <div className="iki-kolon">
+            <div className="metin-govde">
+              <p className="giris-p">
+                Manas Boya A.Ş., boya ve hırdavat ürünlerinin toptan satışını yapan, sektör deneyimi güçlü bir Denizli firmasıdır.
+              </p>
+              <p>
+                Yalnızca ürün tedarik etmiyoruz. Doğru ürünü seçmenize, doğru uygulamaya ulaşmanıza ve işinizi zamanında
+                tamamlamanıza yardımcı olan bir çözüm ortağı olmayı hedefliyoruz. Geniş ürün yelpazemiz, güçlü tedarik ağımız
+                ve hızlı teslimat anlayışımız bu hedefin temelini oluşturuyor.
+              </p>
+              <p>
+                Müşterilerimizin ihtiyaçlarını doğru anlamayı, iş süreçlerini kolaylaştırmayı ve uzun soluklu iş birlikleri
+                kurmayı önemsiyoruz. Satıştan teslimata kadar her aşamada şeffaf ve çözüm odaklı çalışıyoruz.
+              </p>
+              <p>Denizli merkezli olarak sanayi boyalarından inşaat grubuna kadar farklı sektörlere hizmet veriyoruz.</p>
+            </div>
+            <figure>
+              <img src="/img/manas-depo.jpg" alt="Manas Boya deposu" />
+            </figure>
+          </div>
+          <div className="ilkeler">
+            <div className="ilke">
+              <div className="kare" />
+              <h3>Geniş ürün yelpazesi</h3>
+              <p>Sanayi ve inşaat boyalarından yapı kimyasallarına, uygulama ekipmanlarına kadar.</p>
+            </div>
+            <div className="ilke">
+              <div className="kare" />
+              <h3>Güçlü tedarik ağı</h3>
+              <p>Sektörün güvenilir markalarıyla doğrudan çalışıyoruz.</p>
+            </div>
+            <div className="ilke">
+              <div className="kare" />
+              <h3>Hızlı teslimat</h3>
+              <p>Denizli ve tüm bölgeye planlı, zamanında sevkiyat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Serit />
+    </>
   );
 }

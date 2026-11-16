@@ -27,3 +27,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+# Tasarım kaynak dosyaları (siteye taşındı, yayına gitmez)
+/yeni-tasarim/
+*.tsbuildinfo
